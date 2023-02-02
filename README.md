@@ -6,4 +6,4 @@ HISAT2\
 bamCoverage\
 HTSeq-Count\
 featureCounts\
-StringTie\
+StringTie

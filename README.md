@@ -10,9 +10,16 @@ Porechop\
 Filtlong\
 Nanoplot
 
+## Genome QC
+Assembly Stats\
+BUSCO\
+CheckM
+
 ## RNA-seq
 HISAT2\
 bamCoverage\
 HTSeq-Count\
 featureCounts\
-StringTie
+StringTie\
+Salmon
+

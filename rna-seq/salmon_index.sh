@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
-#SBATCH -J stringtie
+#SBATCH -J salmon
 #SBATCH --partition=long
-#SBATCH --mem=500M
+#SBATCH --mem=2G
 #SBATCH --cpus-per-task=4
 
-# sorted bam = $1
+# transcriptome_cds = $1
 
 export MYCONDAPATH=/mnt/shared/scratch/jnprice/apps/conda
-
 source ${MYCONDAPATH}/bin/activate rna-seq
 
-fileshort=$(basename $1 | sed s/".sorted.bam"//g)
+fileshort=$(basename $1 | sed s/".fasta"//g)
 
-stringtie -o "$fileshort".gtf $1
-
+salmon index -t $1 -i "$fileshort"_index --keepDuplicates -k 27

@@ -15,6 +15,12 @@ Assembly Stats\
 BUSCO\
 CheckM
 
+## Genome Annotation
+BRAKER\
+Prokka\
+Red\
+Longest Isoform
+
 ## RNA-seq
 HISAT2\
 bamCoverage\

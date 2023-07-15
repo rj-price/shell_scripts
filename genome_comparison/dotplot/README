@@ -1,0 +1,7 @@
+#Create dotplot synteny analysis from two genomes
+
+# First create the minimap.paf file from 2 genomes 
+sbatch $Progdir/minimap.sh $Genome1 $Genome2 $Outdir
+
+#Create the dot plot 
+sbatch $Progdir/create_dotplot.sh $paf_file $Outdir

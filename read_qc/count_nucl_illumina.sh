@@ -13,13 +13,13 @@ OutDir=$4
 #cp $1 $CurDir
 #cp $2 $CurDir
 
-#gunzip $Read_F
-#gunzip $Read_R
+gunzip -k $Read_F
+gunzip -k $Read_R
 
-#Sub1=$(basename $1 | sed s/".fastq.gz"//g)
-#Sub2=$(basename $2 | sed s/".fastq.gz"//g)
+Sub1=$(basename $1 | sed s/".fastq.gz"//g)
+Sub2=$(basename $2 | sed s/".fastq.gz"//g)
 
-/mnt/shared/scratch/jnprice/apps/count_nucl.pl -i $1 -i $2 -g $3 > "$OutDir"_estimated_coverage.log
+/mnt/shared/scratch/jnprice/apps/count_nucl.pl -i $Sub1.fastq -i $Sub2.fastq -g $3 > "$OutDir"_estimated_coverage.log
 
-#rm $Sub1.fastq
-#rm $Sub2.fastq
+rm $Sub1.fastq
+rm $Sub2.fastq

@@ -10,4 +10,4 @@ export MYCONDAPATH=/mnt/shared/scratch/jnprice/apps/conda
 source ${MYCONDAPATH}/bin/activate busco
 
 fileshort=$(basename $1 | sed s/".fasta"//g)
-busco -m genome -c 8 -i $1 -o BUSCO_$fileshort.poly -l /mnt/shared/scratch/jnprice/private/busco_downloads/lineages/polyporales_odb10
+busco -m genome -c 8 -i $1 -o BUSCO_$fileshort.poly -l ~/busco_downloads/lineages/polyporales_odb10

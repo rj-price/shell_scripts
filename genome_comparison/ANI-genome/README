@@ -1,0 +1,5 @@
+# Whole genome alignment tool for assembled genomes 
+# GSAlign can be used to determine the similarity between two genomes, it also outputs variants identified during the alignment. 
+# ANI % in slurm out file is the percentage average nucleotide identity between two genomes.
+  
+sbatch gsa_align.sh $Genome1 $Genome2 $Prefix $Outdir

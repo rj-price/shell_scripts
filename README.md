@@ -1,19 +1,38 @@
 # shell_scripts
-Collection of shell scripts used to run analyses on SLURM-based cluster.
+A collection of shell scripts used to run analyses on a SLURM-based HPC cluster.
 
 ## Read QC
 Count Nucelotides\
 FastQC\
-Trimmomatic\
-Singe to Multi fast5\
-Porechop\
 Filtlong\
-Nanoplot
+Nanoplot\
+Porechop\
+Singe to Multi fast5\
+Trimmomatic
+
+## Genome Assembly
+Long Polish (Racon x1 & Medaka x1)\
+NECAT\
+Pilon\
+Purge Dups\
+RaGOO\
+RagTag\
+Raven\
+SPAdes\
+Trycycler
+
+## Genome Comparison
+ANI\
+Circos\
+Dotplot
 
 ## Genome QC
 Assembly Stats\
 BUSCO\
-CheckM
+CheckM\
+HapDup\
+Happy\
+KAT
 
 ## Genome Annotation
 BRAKER\
@@ -22,10 +41,13 @@ Red\
 Longest Isoform
 
 ## RNA-seq
-HISAT2\
 bamCoverage\
-HTSeq-Count\
 featureCounts\
-StringTie\
-Salmon
+HISAT2\
+HTSeq-Count\
+Salmon\
+StringTie
 
+## Ortholog Analysis
+BUSCO\
+OrthoFinder

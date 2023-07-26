@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH -J salmon
-#SBATCH --partition=long
+#SBATCH --partition=medium
 #SBATCH --mem=2G
 #SBATCH --cpus-per-task=4
 

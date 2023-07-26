@@ -4,19 +4,21 @@
 #SBATCH --mem=2G
 #SBATCH --cpus-per-task=4
 
-# Library 1 forward reads = $1
-# Index = $2
+# Forward reads = $1
+# Reverse reads = $2
+# Index = $3
 
 export MYCONDAPATH=/mnt/shared/scratch/jnprice/apps/conda
 source ${MYCONDAPATH}/bin/activate rna-seq
 
-short=$(basename $1 | sed s/"_EKRN.*.fastq.gz"//g)
+short=$(basename $1 | sed s/"_F_paired.fastq.gz"//g)
 
-ReadF=$(ls /mnt/shared/scratch/jnprice/av_plant_rna/trimmed/"$short"*F_paired.fastq.gz | tr '\n' ' ')
-ReadR=$(ls /mnt/shared/scratch/jnprice/av_plant_rna/trimmed/"$short"*R_paired.fastq.gz | tr '\n' ' ')
+ReadF=$1
+ReadR=$2
+Index=$3
 
 salmon quant \
-    -i $2 \
+    -i $Index \
     -l A \
     -1 $ReadF \
     -2 $ReadR \

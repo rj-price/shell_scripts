@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH -J minimap
-#SBATCH --partition=long
+#SBATCH --partition=medium
 #SBATCH --mem=1G
 #SBATCH --cpus-per-task=4
 
@@ -12,4 +12,4 @@ target=$1
 query=$2
 outdir=$3
 
-minimap2 -x asm5 -t 16 $target $query > $outdir/minimap.paf
+minimap2 -x asm5 -t 4 $target $query > $outdir/minimap.paf

@@ -16,12 +16,11 @@ outdir=$2
 
 cd $outdir
 
-dotplot=~/scripts/genome_comparison/dotplot
+dotplot=/mnt/shared/home/jnprice/scripts/shell_scripts/genome_comparison/dotplot
 $dotplot/pafCoordsDotPlotly.R \
 -i $paf \
 -o paf_plot \
--m 2000 \
--q 50000 \
--k 10 \
--s -t -l -p 12
+-m 1000 \
+-q 10000 \
+-s -t -l
 

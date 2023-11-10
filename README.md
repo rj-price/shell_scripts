@@ -51,3 +51,14 @@ StringTie
 ## Ortholog Analysis
 BUSCO\
 OrthoFinder
+
+## Phylogenies
+BUSCO Phylogenetics\
+Orthofinder\
+SANS Genome\
+SNP RAxML
+
+## Variant Analysis
+LRA\
+Medaka\
+SVIM

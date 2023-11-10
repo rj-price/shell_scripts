@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #SBATCH -J necat
-#SBATCH --partition=long
-#SBATCH --mem=80G
-#SBATCH --cpus-per-task=24
+#SBATCH --partition=medium
+#SBATCH --mem=60G
+#SBATCH --cpus-per-task=8
 
 # necat config = $1
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH -J busco
-#SBATCH --partition=long
+#SBATCH --partition=medium
 #SBATCH --mem=8G
 #SBATCH --cpus-per-task=8
 

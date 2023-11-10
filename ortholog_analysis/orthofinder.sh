@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH -J orthofinder
 #SBATCH --partition=long
-#SBATCH --mem=10G
+#SBATCH --mem=50G
 #SBATCH --cpus-per-task=16
 
 # proteome_dir = $1
@@ -14,4 +14,4 @@ ulimit -Hn
 ulimit -n 4096
 ulimit -Sn
 
-/mnt/shared/scratch/jnprice/apps/OrthoFinder/orthofinder.py -M msa -t 16 -a 10 -f $1 
+/mnt/shared/scratch/jnprice/apps/OrthoFinder/orthofinder.py -M msa -t 16 -a 30 -f $1 

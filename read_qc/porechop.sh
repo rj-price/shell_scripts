@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH -J porechop
-#SBATCH --partition=long
-#SBATCH --mem=8G
+#SBATCH --partition=medium
+#SBATCH --mem=40G
 #SBATCH --cpus-per-task=4
 
 # reads_dir = $1

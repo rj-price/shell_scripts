@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #SBATCH -J satsumasynteny
-#SBATCH --partition=long
-#SBATCH --mem=40G
-#SBATCH --cpus-per-task=16
+#SBATCH --partition=medium
+#SBATCH --mem=20G
+#SBATCH --cpus-per-task=8
 
 ##########################################################################
 #INPUT:

@@ -6,5 +6,5 @@
 
 # reads = $1
 
-mkdir fastqc_trimmed
-fastqc $1 -t 2 -o fastqc_trimmed
+mkdir fastqc
+fastqc $1 -t 2 -o fastqc

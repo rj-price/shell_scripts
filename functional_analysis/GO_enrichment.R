@@ -39,7 +39,7 @@ MFresultFisher
 
 MFallGO = usedGO(object = MFdata)
 
-MFallRes <- GenTable(MFdata, classicFisher = MFresultFisher, orderBy = "MFresultFisher", ranksOf = "classicFisher", topNodes = length(MFallGO))
+MFallRes <- GenTable(MFdata, classicFisher = MFresultFisher, orderBy = "MFresultFisher", ranksOf = "classicFisher", topNodes = length(MFallGO), numChar=1000)
 table_out <- paste(o, "/", "TopGO_MF.tsv", sep="")
 write.table(MFallRes, file = table_out, sep = "\t")
 
@@ -62,12 +62,12 @@ MFdotplot <-
   scale_size_continuous(name = "Count") +
   scale_color_continuous(name = "p-value") +
   scale_y_discrete(labels = label_wrap(50)) +
-  labs(x = "Gene Ratio", y = "") +
+  labs(title = "Molecular Function", x = "Gene Ratio", y = "") +
   theme_minimal() +
   scale_x_continuous(limits = c(-0.05, 1.05))
 
-plot_out <- paste(o, "/", "TopGO_MF_dotplot.pdf", sep="")
-ggsave(plot_out, plot = MFdotplot, width = 10, height = 8, dpi = 300)
+plot_out <- paste(o, "/", "TopGO_MF_dotplot.jpg", sep="")
+ggsave(plot_out, plot = MFdotplot, width = 10, height = 18, dpi = 300, bg = "white")
 
 
 # ---
@@ -81,7 +81,7 @@ BPresultFisher
 
 BPallGO = usedGO(object = BPdata)
 
-BPallRes <- GenTable(BPdata, classicFisher = BPresultFisher, orderBy = "BPresultFisher", ranksOf = "classicFisher", topNodes = length(BPallGO))
+BPallRes <- GenTable(BPdata, classicFisher = BPresultFisher, orderBy = "BPresultFisher", ranksOf = "classicFisher", topNodes = length(BPallGO), numChar=1000)
 table_out <- paste(o, "/", "TopGO_BP.tsv", sep="")
 write.table(BPallRes, file = table_out, sep = "\t")
 
@@ -104,12 +104,12 @@ BPdotplot <-
   scale_size_continuous(name = "Count") +
   scale_color_continuous(name = "p-value") +
   scale_y_discrete(labels = label_wrap(50)) +
-  labs(x = "Gene Ratio", y = "") +
+  labs(title = "Biological Process", x = "Gene Ratio", y = "") +
   theme_minimal() +
   scale_x_continuous(limits = c(-0.05, 1.05))
 
-plot_out <- paste(o, "/", "TopGO_BP_dotplot.pdf", sep="")
-ggsave(plot_out, plot = BPdotplot, width = 10, height = 8, dpi = 300)
+plot_out <- paste(o, "/", "TopGO_BP_dotplot.jpg", sep="")
+ggsave(plot_out, plot = BPdotplot, width = 10, height = 18, dpi = 300, bg = "white")
 
 # ---
 # Test enrichment of Cellular Component ontologies
@@ -122,7 +122,7 @@ CCresultFisher
 
 CCallGO = usedGO(object = CCdata)
 
-CCallRes <- GenTable(CCdata, classicFisher = CCresultFisher, orderBy = "CCresultFisher", ranksOf = "classicFisher", topNodes = length(CCallGO))
+CCallRes <- GenTable(CCdata, classicFisher = CCresultFisher, orderBy = "CCresultFisher", ranksOf = "classicFisher", topNodes = length(CCallGO), numChar=1000)
 table_out <- paste(o, "/", "TopGO_CC.tsv", sep="")
 write.table(CCallRes, file = table_out, sep = "\t")
 
@@ -145,9 +145,9 @@ CCdotplot <-
   scale_size_continuous(name = "Count") +
   scale_color_continuous(name = "p-value") +
   scale_y_discrete(labels = label_wrap(50)) +
-  labs(x = "Gene Ratio", y = "") +
+  labs(title = "Cellular Component", x = "Gene Ratio", y = "") +
   theme_minimal() +
   scale_x_continuous(limits = c(-0.05, 1.05))
 
-plot_out <- paste(o, "/", "TopGO_CC_dotplot.pdf", sep="")
-ggsave(plot_out, plot = CCdotplot, width = 10, height = 8, dpi = 300)
+plot_out <- paste(o, "/", "TopGO_CC_dotplot.jpg", sep="")
+ggsave(plot_out, plot = CCdotplot, width = 10, height = 18, dpi = 300, bg = "white")
